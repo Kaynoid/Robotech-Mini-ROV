@@ -5,8 +5,8 @@
   "manifest_version": 2,
   "app": {
     "background": {
-      "scripts": ["background.js"]
+      "scripts": ["JSFiles/background.js"]
     }
   },
-  "icons": { "16": "robot.png" }
+  "icons": { "16": "Icons/robot.png" }
 }
