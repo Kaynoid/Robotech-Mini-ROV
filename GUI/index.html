@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+  </head>
+  <body>
+    <div>
+      <!-- big container division contains all elements-->
+      <div>
+        <!--Motor's Reading division-->
+        <h2>Motor Reading</h2>
+        <!-- add motor icon -->
+        <div>
+          <!-- Motor Output Values -->
+          <!-- Output for Motor 1,2,3,4 and Two Vertical Motors and add controller axis -->
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <!-- axis output or use x and y -->
+        </div>
+      </div>
+      <div>
+        <!-- Timer and Slider and Sensors division -->
+        <input type="text" />
+
+        <button>adjust motor sensitivity</button>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="50"
+          class="slider"
+          id="myRange"
+        />
+
+        <div>
+          <h2>Sensor Reading</h2>
+          <!-- add sensor icon -->
+        </div>
+        <div>
+          <!-- outputs for PID,Temprature,Pressure and Velocity -->
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+          <input type="text" />
+        </div>
+      </div>
+
+      <div>
+        <!--Arm's division-->
+        <div>
+          <h2>Arm's Information</h2>
+          <!-- add Arms's Icon -->
+        </div>
+        <div>
+          <!-- pnumeatic arm and Dc arm status -->
+          <input type="text" />
+          <input type="text" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
