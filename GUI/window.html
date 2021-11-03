@@ -8,61 +8,139 @@
     <title>Main Page</title>
   </head>
   <body>
-    <div>
+    <div class="container">
       <!-- big container division contains all elements-->
-      <div>
-        <!--Motor's Reading division-->
-        <h2>Motor Reading</h2>
-        <!-- add motor icon -->
-        <div>
-          <!-- Motor Output Values -->
-          <!-- Output for Motor 1,2,3,4 and Two Vertical Motors and add controller axis -->
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <!-- axis output or use x and y -->
-        </div>
-      </div>
-      <div>
-        <!-- Timer and Slider and Sensors division -->
-        <input type="text" />
+      <div class="row">
+        <div class="col-md-8">
+          <!--Motor's Reading division-->
+          <div>
+            <h2>Motor Reading</h2>
+            <i></i>
+          </div>
 
-        <button>adjust motor sensitivity</button>
-        <input
-          type="range"
-          min="1"
-          max="100"
-          value="50"
-          class="slider"
-          id="myRange"
-        />
+          <!-- add motor icon -->
+          <div>
+            <!-- Motor Output Values -->
+            <!-- Output for Motor 1,2,3,4 and Two Vertical Motors and add controller axis -->
+            <label>Motor 1</label>
+            <input type="text" disable />
+            <label>Motor 2</label>
+            <input type="text" disable />
+            <label>Motor 3</label>
+            <input type="text" disable />
+            <label>Motor 4</label>
+            <input type="text" disable />
+            <label>Vertical Motor 1</label>
+            <input type="text" disable />
+            <label>Vertical Motor 2</label>
+            <input type="text" disable />
+            <div
+              style="
+                position: relative;
+                height: 175px;
+                width: 175px;
+                display: inline-block;
+                border: 10px solid rgba(0, 0, 0, 0);
+              "
+            >
+              <svg
+                style="
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  z-index: 1;
+                "
+              >
+                <g transform="translate(78.5 78.5) scale(0.95, 0.95)">
+                  <circle
+                    cx="0"
+                    cy="0"
+                    r="78.5"
+                    fill="none"
+                    stroke="hsla(210, 50%, 20%, 0.2)"
+                    stroke-width="4"
+                  ></circle>
+                  <line
+                    x1="0"
+                    y1="-78.5"
+                    x2="0"
+                    y2="78.5"
+                    stroke="hsla(210, 50%, 20%, 0.2)"
+                    stroke-width="2"
+                  ></line>
+                  <line
+                    x1="-78.5"
+                    y1="0"
+                    x2="78.5"
+                    y2="0"
+                    stroke="hsla(210, 50%, 20%, 0.2)"
+                    stroke-width="2"
+                  ></line>
+                  <line
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="0"
+                    stroke="#19334D"
+                    stroke-width="2"
+                  ></line>
+                  <circle cx="0" cy="0" r="4" fill="#19334D"></circle>
+                </g>
+              </svg>
+            </div>
 
-        <div>
-          <h2>Sensor Reading</h2>
-          <!-- add sensor icon -->
+            <!-- axis output or use x and y -->
+          </div>
         </div>
-        <div>
-          <!-- outputs for PID,Temprature,Pressure and Velocity -->
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-        </div>
-      </div>
 
-      <div>
-        <!--Arm's division-->
-        <div>
-          <h2>Arm's Information</h2>
-          <!-- add Arms's Icon -->
+        <div class="col-md-4">
+          <!-- Timer and Slider and Sensors division -->
+          <div>
+            <label>Timer</label>
+            <input type="text" />
+          </div>
+          <div>
+            <button>adjust motor sensitivity</button>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="slider"
+              id="myRange"
+            />
+          </div>
+
+          <div>
+            <h2>Sensor Reading</h2>
+            <i></i>
+            <!-- add sensor icon -->
+          </div>
+          <div>
+            <!-- outputs for PID,Temprature,Pressure and Velocity -->
+            <label>PID</label>
+            <input type="text" disable />
+            <label>Temprature</label>
+            <input type="text" disable />
+            <label>Pressure</label>
+            <input type="text" disable />
+            <label>Velocity</label>
+            <input type="text" disable />
+          </div>
         </div>
-        <div>
-          <!-- pnumeatic arm and Dc arm status -->
-          <input type="text" />
-          <input type="text" />
+
+        <div class="row">
+          <!--Arm's division-->
+          <div>
+            <h2>Arm's Information</h2>
+            <i></i>
+            <!-- add Arms's Icon -->
+          </div>
+          <div>
+            <!-- pnumeatic arm and Dc arm status -->
+            <input type="text" disable />
+            <input type="text" disable />
+          </div>
         </div>
       </div>
     </div>
