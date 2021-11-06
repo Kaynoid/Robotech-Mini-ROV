@@ -35,24 +35,24 @@
               <div class="col-md-4">
                 <label>Motor 1</label>
                 <div class="round_label">
-                  <label style="font-size: large">2000</label>
+                  <label style="font-size: large" id="motor1">2000</label>
                 </div>
 
                 <!-- <label>100</label> -->
                 <label>Motor 3</label>
                 <div class="round_label">
-                  <label style="font-size: large">2000</label>
+                  <label style="font-size: large" id="motor3">2000</label>
                 </div>
               </div>
 
               <div class="col-md-4">
                 <label>Motor 2</label>
                 <div class="round_label">
-                  <label style="font-size: large">2000</label>
+                  <label style="font-size: large" id="motor2">2000</label>
                 </div>
                 <label>Motor 4</label>
                 <div class="round_label">
-                  <label style="font-size: large">2000</label>
+                  <label style="font-size: large" id="motor4">2000</label>
                 </div>
               </div>
             </div>
@@ -61,11 +61,15 @@
               <div class="col-md-4">
                 <label>Vertical Motor 1</label>
                 <div class="round_label">
-                  <label style="font-size: large">2000</label>
+                  <label style="font-size: large" id="verticalMotor1"
+                    >2000</label
+                  >
                 </div>
                 <label>Vertical Motor 2</label>
                 <div class="round_label">
-                  <label style="font-size: large">2000</label>
+                  <label style="font-size: large" id="verticalMotor2"
+                    >2000</label
+                  >
                 </div>
               </div>
 
@@ -113,6 +117,7 @@
                         stroke-width="2 "
                       ></line>
                       <line
+                        id="joystickLine"
                         x1="0 "
                         y1="0 "
                         x2="0 "
@@ -120,7 +125,13 @@
                         stroke="#19334D "
                         stroke-width="2 "
                       ></line>
-                      <circle cx="0 " cy="0 " r="4 " fill="#19334D "></circle>
+                      <circle
+                        id="joystickCircle"
+                        cx="0 "
+                        cy="0 "
+                        r="4 "
+                        fill="#19334D "
+                      ></circle>
                     </g>
                   </svg>
                 </div>
@@ -140,7 +151,7 @@
 
             <div class="col-md-3" style="padding-bottom: 5%">
               <div style="width: 85%" class="round_label">
-                <label style="font-size: larger">30:05</label>
+                <label style="font-size: larger" id="timer">30:05</label>
                 <label style="font-size: larger">m:s</label>
               </div>
             </div>
@@ -149,13 +160,22 @@
           <div class="row justify-content-center" style="padding-bottom: 5%">
             <div class="col-md-2" style="margin-right: 8%">
               <!-- <button style="width: 200 ">Increase Speed</button> -->
-              <button type="button " class="btn btn-secondary">
+              <button
+                type="button "
+                id="increaseSpeedBtn"
+                class="btn btn-secondary"
+              >
                 Increase Speed
               </button>
             </div>
 
             <div class="col-md-2" style="padding-top: 3.5%">
-              <input type="range" id="range" min="1000" max="2000" />
+              <input
+                type="range"
+                id="range increaseSpeedSlider"
+                min="1000"
+                max="2000"
+              />
             </div>
           </div>
 
@@ -180,7 +200,7 @@
               </div>
               <div class="col-md-3">
                 <div class="round_label">
-                  <label>On</label>
+                  <label id="pidState">On</label>
                 </div>
               </div>
             </div>
@@ -191,7 +211,7 @@
               </div>
               <div class="col-md-3">
                 <div class="round_label">
-                  <label>40</label>
+                  <label id="temprature">40</label>
                   <label>°C</label>
                 </div>
               </div>
@@ -203,7 +223,7 @@
               </div>
               <div class="col-md-3">
                 <div class="round_label">
-                  <label>5</label>
+                  <label id="pressure">5</label>
                   <label>bar</label>
                 </div>
               </div>
@@ -214,7 +234,7 @@
               </div>
               <div class="col-md-3">
                 <div class="round_label">
-                  <label>50</label>
+                  <label id="velocity">50</label>
                   <label>m/s</label>
                 </div>
               </div>
@@ -245,7 +265,7 @@
               </div>
               <div class="col-lg-3">
                 <div class="round_label">
-                  <label>off</label>
+                  <label id="dcArmState">off</label>
                 </div>
               </div>
             </div>
@@ -253,7 +273,7 @@
               <div class="col-lg-3"><label>Pneumatic Arm</label></div>
               <div class="col-lg-3">
                 <div class="round_label">
-                  <label>off</label>
+                  <label id="pnumaticArmState">off</label>
                 </div>
               </div>
             </div>
@@ -261,5 +281,6 @@
         </div>
       </div>
     </div>
+    <script src="JSFiles/app.js"></script>
   </body>
 </html>
