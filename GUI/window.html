@@ -151,30 +151,43 @@
 
             <div class="col-md-3" style="padding-bottom: 5%">
               <div style="width: 85%" class="round_label">
-                <label style="font-size: larger" id="timer">30:05</label>
+                <label style="font-size: larger" id="timer">15:00</label>
                 <label style="font-size: larger">m:s</label>
               </div>
+            </div>
+          </div>
+          <div class="row justify-content-center" style="padding-left: 5%">
+            <div class="col-md-2" style="padding-bottom: 5%">
+              <button type="button" class="btn btn-secondary" id="startTimer">
+                Start
+              </button>
+            </div>
+            <div class="col-md-2" style="padding-bottom: 5%">
+              <button type="button" class="btn btn-secondary" id="pauseTimer">
+                Pause
+              </button>
+            </div>
+            <div class="col-md-2" style="padding-bottom: 5%">
+              <button type="button" class="btn btn-secondary" id="resetTimer">
+                Reset
+              </button>
             </div>
           </div>
 
           <div class="row justify-content-center" style="padding-bottom: 5%">
             <div class="col-md-2" style="margin-right: 8%">
               <!-- <button style="width: 200 ">Increase Speed</button> -->
-              <button
-                type="button "
-                id="increaseSpeedBtn"
-                class="btn btn-secondary"
-              >
-                Increase Speed
-              </button>
+              <input type="number" min="0" max="100" id="maxSpeedInput" />
             </div>
 
-            <div class="col-md-2" style="padding-top: 3.5%">
+            <div class="col-md-2">
               <input
                 type="range"
-                id="range increaseSpeedSlider"
-                min="1000"
-                max="2000"
+                id="range"
+                min="0"
+                max="100"
+                oninput="myFunction(this.value)"
+                onchange="myFunction(this.value)"
               />
             </div>
           </div>
