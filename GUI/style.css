@@ -1,0 +1,15 @@
+.main_page_container {
+  margin-top: 3%;
+  padding: 2%;
+}
+
+#round_label {
+  border: 2px solid black;
+  width: 50%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* style="border: 1px solid black; width: 50% */
