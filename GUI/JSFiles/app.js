@@ -81,7 +81,7 @@ var downloadTimer = setInterval(function () {
 }, 1000)
 // ================Speed Code================================================================
 
-window.addEventListener('click', function () {
+GUI.addEventListener('click', function () {
   if (maxSpeedInput.value > 100) {
     maxSpeedInput.value = 100
   } else if (maxSpeedInput.value < 0) {
