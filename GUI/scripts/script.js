@@ -34,13 +34,28 @@ let time = ''
 
 // ====================================Timer Code =============================
 
+var clicked = true;
 startTimer.addEventListener('click', function () {
-  runTimer = true
+if(clicked){
+  clicked=false;
+  runTimer=true
+  startTimer.textContent="Pause"
+  console.log(clicked)
+  return;
+}
+else{
+  clicked=true;
+  startTimer.textContent="Start"
+  runTimer = false
+
+}
+console.log(clicked)
 })
 
-pauseTimer.addEventListener('click', function () {
-  runTimer = false
-})
+
+//pauseTimer.addEventListener('click', function () {
+  //runTimer = false
+//})
 
 resetTimer.addEventListener('click', function () {
   runTimer = false
@@ -64,10 +79,9 @@ var downloadTimer = setInterval(function () {
     timer.textContent = time
   }
 }, 1000)
-
 // ================Speed Code================================================================
 
-window.addEventListener('click', function () {
+GUI.addEventListener('click', function () {
   if (maxSpeedInput.value > 100) {
     maxSpeedInput.value = 100
   } else if (maxSpeedInput.value < 0) {
