@@ -13,8 +13,18 @@ window.addEventListener("gamepadconnected", function(e) {
     const myGamepad = navigator.getGamepads()[0];
 
     //var joystickX = applyDeadzone(gamepad.axes[0], 0.25); // use the first gamepad
-   x=myGamepad.axes[0]
-   y=myGamepad.axes[1]
+ 
+    if (myGamepad!=null) {
+      x=myGamepad.axes[0];
+      y=myGamepad.axes[1];
+      console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` ); 
+  
+//   if (myGamepad!=null) {
+//     y=myGamepad.axes[1];
+
+// }
+  //  x=myGamepad.axes[0]
+  //  y=myGamepad.axes[1]
     if(x <0.25 &&x >0 ) {x=0
       console.log(x) }
     else if (x >- 0.25 &&x <0){x=0
@@ -25,53 +35,50 @@ window.addEventListener("gamepadconnected", function(e) {
     else if (y >- 0.25 &&y <0){ y=0
       console.log(y)}
     else{console.log(y)}
-    m1=parseFloat(x.toFixed(0))*400+1500
+    m1=x*400+1500
     m2=y*400+1500
     console.log(m1)
     console.log(m2)
-
-    console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );     
+    if (myGamepad.buttons[0].pressed) {
+      console.log("0 pressed");
+    } 
+    if (myGamepad.buttons[1].pressed) {
+      console.log("1 pressed");
+    }
+    if (myGamepad.buttons[2].pressed) {
+      console.log("2 pressed");
+    }
+    if (myGamepad.buttons[3].pressed) {
+      console.log("3 pressed");
+    }
+    if (myGamepad.buttons[4].pressed) {
+      console.log("4 pressed");
+    }
+    if (myGamepad.buttons[5].pressed) {
+      console.log("5 pressed");
+    }
+    if (myGamepad.buttons[6].pressed) {
+      console.log("6 pressed");
+    }
+    if (myGamepad.buttons[7].pressed) {
+      console.log("7 pressed");
+    }
+    if (myGamepad.buttons[8].pressed) {
+      console.log("8 pressed");
+    }
+    if (myGamepad.buttons[9].pressed) {
+      console.log("9 pressed");
+    }
+    if (myGamepad.buttons[10].pressed) {
+      console.log("10 pressed");
+    }
+    if (myGamepad.buttons[11].pressed) {
+      console.log("11 pressed");
+    }
+    }       
     //console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );
 }, 100) // print axes 10 times per second
-setInterval(() => {
-    const myGamepad = navigator.getGamepads()[0];
-if (myGamepad.buttons[0].pressed) {
-    console.log("0 pressed");
-  } 
-  if (myGamepad.buttons[1].pressed) {
-    console.log("1 pressed");
-  }
-  if (myGamepad.buttons[2].pressed) {
-    console.log("2 pressed");
-  }
-  if (myGamepad.buttons[3].pressed) {
-    console.log("3 pressed");
-  }
-  if (myGamepad.buttons[4].pressed) {
-    console.log("4 pressed");
-  }
-  if (myGamepad.buttons[5].pressed) {
-    console.log("5 pressed");
-  }
-  if (myGamepad.buttons[6].pressed) {
-    console.log("6 pressed");
-  }
-  if (myGamepad.buttons[7].pressed) {
-    console.log("7 pressed");
-  }
-  if (myGamepad.buttons[8].pressed) {
-    console.log("8 pressed");
-  }
-  if (myGamepad.buttons[9].pressed) {
-    console.log("9 pressed");
-  }
-  if (myGamepad.buttons[10].pressed) {
-    console.log("10 pressed");
-  }
-  if (myGamepad.buttons[11].pressed) {
-    console.log("11 pressed");
-  }
-}, 100) 
+
 // gamepad.onleftstickchanged((values) => {
 //   let x = values.x;
 //   let y = values.y;
