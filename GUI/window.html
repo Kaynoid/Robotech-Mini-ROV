@@ -10,16 +10,13 @@
   <title>Try</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans+Devanagari:wght@700&display=swap"
-    rel="stylesheet">
 </head>
 
 <body>
   <nav
     class="navbar navbar-expand-lg fixed-top navbar-expand-lg navbar-dark p-md-3 navbar-expand-lg navbar-dark p-md-3 py-1"
-    style="font-size:xx-large; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+    style="font-size:xx-large;">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="img\logo.png" alt="" height="55" class="mb-2"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -46,11 +43,11 @@
       <div class="card-container">
         <div class="row text-center ">
           <div class="col">
-            <div class="card text-light">
+            <div class="card text-light h-50">
               <div class="card-body text-center ">
                 <div>
                   <div class="row text-center">
-                    <div class="title-card d-flex align-items-center">
+                    <div class="title-card d-flex align-items-center justify-content-center">
                       <div class="icon m-3">
                         <img class="img-fluid" src="img/motorIcon.png" style="width: 50px; height: 50px" />
                       </div>
@@ -65,23 +62,23 @@
                       <div class="col md-2 justify-content-center">
                         <label id="labeltext" class="row ">Motor 1</label>
                         <div class="round_label">
-                          <label class="text" id="motor1">2000</label>
+                          <label class="text" id="motor1">1500</label>
                         </div>
 
                         <label id="labeltext" class="row ">Motor 3</label>
                         <div class="round_label">
-                          <label class="text" id="motor3">2000</label>
+                          <label class="text" id="motor3">1500</label>
                         </div>
                       </div>
 
                       <div class="col md-2 justify-content-center">
                         <label id="labeltext" class="row">Motor 2</label>
                         <div class="round_label">
-                          <label class="text" id="motor2">2000</label>
+                          <label class="text" id="motor2">1500</label>
                         </div>
                         <label id="labeltext" class="row ">Motor 4</label>
                         <div class="round_label">
-                          <label class="text" id="motor4">2000</label>
+                          <label class="text" id="motor4">1500</label>
                         </div>
                       </div>
                     </div>
@@ -93,9 +90,8 @@
             <div class="col-md-12 mt-3">
               <div class=" card-body-sensor text-light justify-content-center">
                 <div class="text-center blob2">
-                  <label class="sensor">Sensors</h1>
                   <div>
-                    <img class="img-fluid" src="img\sensor.png" style="width: 70px; height: 70px" />
+                    <img class="img-fluid logo" src="img/robotech.png"/>
                   </div>
                 </div>
               </div>
@@ -104,74 +100,66 @@
 
           </div>
           <div class="col-md-4">
-            <div class="card text-light justify-content-center">
-              <div class="card-body text-center ">
+            <div class="card text-light h-50">
+              <div class="card-body text-center h-100">
                 <div>
                   <div class="row text-center">
-                    <div class="title-card d-flex">
-                      <div class="col-md-4 justify-content-center">
-                        <img class="img" src="img\joystick.png" style="width: 50px; height: 50px" />
+                    <div class="title-card d-flex align-items-center justify-content-center">
+                      <div class="icon m-3">
+                        <img class="img-fluid" src="img/joystick.png" style="width: 50px; height: 50px" />
                       </div>
-                      <div class="col-md-7 justify-content-center mt-2">
-                        <h1 class="blob joysticktitle"> Joystick</h1>
+                      <div class="title text-center">
+                        <h1 class="blob"> Joystick Values</h1>
                       </div>
                     </div>
 
                   </div>
-                  <div class="row justify-content-center text-center mt-3 mb-3">
-                    <div class="col-md-4">
-                      <label id="labeltext">Forward</label>
-                      <div class="round_label">
-                        <label id="forward">0</label>
-                      </div>
-
-
-                      <label id="labeltext">Backward</label>
-                      <div class="round_label">
-                        <label id="backward">0</label>
-                      </div>
+                  <div class="justify-content-center text-xl-start mt-3 mb-3">
+                    <div class="row-md-4 mt-3 mb-3 h-50">
+                      <label id="labeltext" style="width: 10rem">Forward/Backward:</label>
+                      <label class="round_label" style="width: 5rem; margin-right: 5%;" id="frontBack">-0.0000</label>
+                      <img id="Forward" class="ms-5" src="img/forward.png" style="height: 2rem; opacity: 25%;">  <!--toggle inline and none-->
+                      <img id="Backward" class="ms-5" src="img/backward.png" style="height: 2rem; transform: scaleX(-1); opacity: 25%;">
                     </div>
 
-                    <div class="col-md-4">
-                      <label id="labeltext">Right</label>
-                      <div class="round_label">
-                        <label id="right">0</label>
-                      </div>
-                      <label id="labeltext">Left</label>
-                      <div class="round_label">
-                        <label id="left">0</label>
-                      </div>
+                    <div class="row-md-4 mt-3 mb-3 h-50">
+                      <label id="labeltext" style="width: 10rem">Rot. Right/Left:</label>
+                      <label class="round_label" style="width: 5rem; margin-right: 5%;" id="rotation">0.0000</label>
+                      <img id="Clockwise" class="ms-5" src="img/rotate.png" style="height: 2rem; opacity: 25%;">  <!--toggle inline and none-->
+                      <img id="Anticlockwise" class="ms-5" src="img/rotate.png" style="height: 2rem; transform: scaleX(-1); opacity: 25%;">
                     </div>
-                    <div class="col-md-4">
-                      <label id="labeltext">Up</label>
-                      <div class="round_label">
-                        <label id="up">0</label>
-                      </div>
 
-
-                      <label id="labeltext">Down</label>
-                      <div class="round_label">
-                        <label id="down">0</label>
-                      </div>
+                    <div class="row-md-4 mt-3 mb-3 h-50">
+                      <label id="labeltext" style="width: 10rem">Up/Down:</label>
+                      <label class="round_label" style="width: 5rem; margin-right: 5%;" id="upDown">0.0000</label>
+                      <img id="Up" class="ms-5" src="img/updown.png" style="height: 2rem; opacity: 25%;">  <!--toggle inline and none-->
+                      <img id="Down" class="ms-5" src="img/updown.png" style="height: 2rem; transform: scaleY(-1); opacity: 25%;">
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="card text-light justify-content-center mt-3">
-              <div class="card-body text-center ">
-                <div class="row justify-content-center mb-4 ">
+            <div class="card text-light justify-content-center mt-3 h-50">
+              <div class="card-body text-center">
+                <div class="row justify-content-center ">
+                  <div class="title-card d-flex align-items-center justify-content-center">
+                    <div class="icon m-3">
+                      <img class="img-fluid" src="img/sensorIcon.png" style="width: 50px; height: 50px" />
+                    </div>
+                    <label class="blob">Sensors</label>
+                  </div>
                   <div class="col-md-6">
                     <div class="col-md-12">
                       <label id="labeltext">PID</label>
                       <div class="round_label">
-                        <label id="pidState">On</label>
+                        <label id="pidState">Off</label>
                       </div>
                     </div>
                     <div class="div row mt-4">
                       <div class="col-md-12">
-                        <label id="labeltext">Temprature</label>
+                        <label id="labeltext">Temperature</label>
                         <div class="round_label">
                           <label id="temprature">40</label>
                           <label>°C</label>
@@ -186,16 +174,15 @@
                         <label id="pressure">5</label>
                         <label>bar</label>
                       </div>
-                      <div class="div row mt-3">
+                      <div class="div row mt-4">
                         <div class="col-md-12">
                           <label id="labeltext">Velocity</label>
                           <div class="round_label">
-                            <label id="velocity">50</label>
+                            <label id="velocity">0</label>
                             <label>m/s</label>
                           </div>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -206,39 +193,41 @@
           </div>
 
           <div class="col-md-4">
-            <div class="card text-light">
-              <div class="card-body text-center ">
+            <div class="card text-light h-50">
+              <div class="card-body text-center">
                 <div>
                   <div class="row">
                     <div class="row text-left">
-                      <div class="timer-container mt-1 mb-1 d-flex">
-                        <div class="col-md-4">
-                          <label class="blob">Timer</label>
-                        </div>
-                        <div class="col-md-7">
-                          <div class="round_label timer-box justify-content-center">
-                            <label id="timer">15:00</label>
-                            <label"> m:s</label>
+                      <div class="title-card d-flex align-items-center justify-content-center">
+                        <div class="timer-container mt-1 mb-1 d-flex ms-5">
+                          <div class="col-md-4">
+                            <label class="blob">Timer </label>
+                          </div>
+                          <div class="col-md-7 ms-5">
+                            <div class="round_label timer-box justify-content-center">
+                              <label id="timer">15:00</label>
+                            </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="row ">
+                      <div class="row">
                         <div class="col-md-6 mt-4 mb-4">
-                          <button type="button" class="btn btn-secondary" id="startTimer">
-                            Start
+                          <button class="bg-transparent border-0" style="height: 2rem;">
+                            <img id="playBtn" src="img/play.png" style="display: inline;"> <!--toggle inline and none-->
+                            <img id="pauseBtn" src="img/pause.png" style="display: none;">
                           </button>
                         </div>
                         <div class="col-md-6 mt-4 mb-4">
-                          <button type="button" class="btn btn-secondary" id="resetTimer">
-                            Reset
+                          <button class="bg-transparent h-100 border-0">
+                            <img id="stopBtn" src="img/stop.png">
                           </button>
                         </div>
                       </div>
                     </div>
                     <div class="row mt-4 mb=4 justify-content-center">
                       <div class="col-md-6">
-                        <input type="number" min="0" max="100" id="maxSpeedInput" />
+                        <input type="number" min="0" max="100" id="maxSpeedInput" /> %
                       </div>
 
                       <div class="col-md-6">
@@ -254,13 +243,13 @@
             </div>
             <!-- add Arms's Icon -->
             <!--make 4th card -->
-            <div class=" card col-md-12 justify-content-center mt-3">
+            <div class=" card col-md-12 justify-content-center mt-3 h-50">
               <div class="row m-2">
-                <div class="col-md-6 blob mt-2">
-                  <h1>Arm Information</h1>
-                </div>
-                <div class="col-md-6">
-                  <img src="img/roboticArmIcon.png " style="width: 80px; height: 80px" />
+                <div class="title-card d-flex align-items-center justify-content-center">
+                  <div class="icon m-3">
+                    <img class="img-fluid" src="img/roboticArmIcon.png" style="width: 50px; height: 50px" />
+                  </div>
+                  <label class="blob">Arm Info</label>
                 </div>
                 <div class="row mt-5 mb-4 ">
 
@@ -295,7 +284,7 @@
       </div>
     </section>
   </div>
-  <script src="js/app.js"></script>
+  <script src="js/script.js"></script>
   <script src="js/gamepad.js"></script>
 </body>
 

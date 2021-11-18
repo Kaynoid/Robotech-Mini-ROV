@@ -12,9 +12,9 @@ const joystickLine = document.getElementById('joystickLine')
 const joystickCircle = document.getElementById('joystickCircle')
 
 const timer = document.getElementById('timer')
-const startTimer = document.getElementById('startTimer')
-const pauseTimer = document.getElementById('pauseTimer')
-const resetTimer = document.getElementById('resetTimer')
+const startTimer = document.getElementById('playBtn')
+const pauseTimer = document.getElementById('pauseBtn')
+const resetTimer = document.getElementById('stopBtn')
 
 const maxSpeedInput = document.getElementById('maxSpeedInput')
 maxSpeedInput.defaultValue = 50
@@ -34,32 +34,28 @@ let time = ''
 
 // ====================================Timer Code =============================
 
-var clicked = true;
 startTimer.addEventListener('click', function () {
-if(clicked){
-  clicked=false;
-  runTimer=true
-  startTimer.textContent="Pause"
-  console.log(clicked)
+  runTimer=true;
+  startTimer.style.display = "none";
+  pauseTimer.style.display = "inline";
   return;
 }
-else{
-  clicked=true;
-  startTimer.textContent="Start"
-  runTimer = false
+)
 
+
+pauseTimer.addEventListener('click', function () {
+  runTimer=false;
+  startTimer.style.display = "inline";
+  pauseTimer.style.display = "none";
+  return;
 }
-console.log(clicked)
-})
-
-
-//pauseTimer.addEventListener('click', function () {
-  //runTimer = false
-//})
+)
 
 resetTimer.addEventListener('click', function () {
   runTimer = false
   tLeft = 15 * 60
+  startTimer.style.display = "inline";
+  pauseTimer.style.display = "none";
   timer.textContent = `15:00`
 })
 
@@ -81,7 +77,7 @@ var downloadTimer = setInterval(function () {
 }, 1000)
 // ================Speed Code================================================================
 
-GUI.addEventListener('click', function () {
+window.addEventListener('click', function () {
   if (maxSpeedInput.value > 100) {
     maxSpeedInput.value = 100
   } else if (maxSpeedInput.value < 0) {
