@@ -35,27 +35,24 @@ let time = ''
 // ====================================Timer Code =============================
 
 startTimer.addEventListener('click', function () {
-  runTimer=true;
-  startTimer.style.display = "none";
-  pauseTimer.style.display = "inline";
-  return;
-}
-)
-
+  runTimer = true
+  startTimer.style.display = 'none'
+  pauseTimer.style.display = 'inline'
+  return
+})
 
 pauseTimer.addEventListener('click', function () {
-  runTimer=false;
-  startTimer.style.display = "inline";
-  pauseTimer.style.display = "none";
-  return;
-}
-)
+  runTimer = false
+  startTimer.style.display = 'inline'
+  pauseTimer.style.display = 'none'
+  return
+})
 
 resetTimer.addEventListener('click', function () {
   runTimer = false
   tLeft = 15 * 60
-  startTimer.style.display = "inline";
-  pauseTimer.style.display = "none";
+  startTimer.style.display = 'inline'
+  pauseTimer.style.display = 'none'
   timer.textContent = `15:00`
 })
 
