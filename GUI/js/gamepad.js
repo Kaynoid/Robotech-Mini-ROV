@@ -32,6 +32,10 @@ setInterval(() => {
         m1 = parseFloat(x.toFixed(0)) * 400 + 1500
         m2 = y * 400 + 1500
         console.log(m1)
+            //make it using jquery
+            // $(document).ready(function() {
+            //     $('#motor1').text('5000');
+            // });
             //try innerHTML first then textContent if it doesn't work
         motor_1.innerHTML = m1;
         motor_2.innerHTML = m2;
