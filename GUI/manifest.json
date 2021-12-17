@@ -5,7 +5,15 @@
   "manifest_version": 2,
   "app": {
     "background": {
-      "scripts": ["background.js", "js/script.js", "js/gamepad.js"]
+      "scripts": ["background.js", "js/script.js", "js/gamepad.js", "js/udpsend.js" ]
+
     }
   }
+  "sockets": {
+    "udp": {
+      "bind": "*",
+      "send": "*",
+    }
+  }
+  "permissions":["system.network"]
 }
