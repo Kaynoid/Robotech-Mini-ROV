@@ -25,10 +25,30 @@ window.addEventListener("gamepadconnected", function(e) {
     else if (y >- 0.25 &&y <0){ y=0
       console.log(y)}
     else{console.log(y)}
-    m1=parseFloat(x.toFixed(0))*400+1500
-    m2=y*400+1500
+    
+    m1=x*400+1500
+    m2=y*400+1500 //vertical m2 //horizontal m1
+//s1 relatable to y axis while s2 relatable to x axis
+    if(m2>m1&&m2>=1500&&m1>=1500){ //forward left quarter
+    var s1=m2;} //take the forward value "vertical"
+    if(m1>m2&&m2>=1500&&m1>=1500){ //quarter left up 
+    var s2=m1;} //take the left value "horizontal     
+    if(m2>m1&&m2>=1500&&m1<=1500){
+      if(m1+m2>3000) {//forward right quarter
+           var s1=m2;} //take the forward value "vertical"
+      else{var s2=m1;}} 
+    if(m2>m1&&m2<=1500&&m1<=1500){ //left quarter "down"
+                var s2=m1;} //take the left value "horizontal"              
+    if(m1>m2&&m2<=1500&&m1<=1500){ //backward quarter "down"
+                    var s1=m1;} //take the left value "vertical;"                   
+    if(m1>m2&&m2<1500&&m1>1500){
+      if(m1+m2>3000) {
+          var s1=m2; }//take the backward value "vertical"
+      else{ var s2=m1;}} //take the left value horizontal
     console.log(m1)
     console.log(m2)
+    console.log(s1)
+    console.log(s2)
 
     console.log(`Left stick at (${myGamepad.axes[0]}, ${myGamepad.axes[1]})` );     
     //console.log(`Right stick at (${myGamepad.axes[2]}, ${myGamepad.axes[3]})` );

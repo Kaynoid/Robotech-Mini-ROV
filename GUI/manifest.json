@@ -1,0 +1,19 @@
+{
+  "name": "UDPSockets",
+  "description": "chrome app using udp sockets to send data to server",
+  "version": "0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+
+    }
+  },
+  "sockets": {
+    "udp": {
+      "bind": "*",
+      "send": "*"
+    }
+  },
+  "permissions":["system.network"]
+}
